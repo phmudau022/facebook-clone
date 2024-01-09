@@ -1,13 +1,13 @@
+import 'package:facebook_clone/models/user_model.dart';
+import 'package:facebook_clone/widgets/user_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/models/models.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/widgets.dart';
 
 class ContactsList extends StatelessWidget {
   final List<User> users;
 
   const ContactsList({
-    Key key,
-    @required this.users,
+    Key? key,
+    required this.users,
   }) : super(key: key);
 
   @override

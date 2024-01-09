@@ -1,5 +1,5 @@
+import 'package:facebook_clone/config/palette.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/config/palette.dart';
 
 class CustomTabBar extends StatelessWidget {
   final List<IconData> icons;
@@ -8,10 +8,10 @@ class CustomTabBar extends StatelessWidget {
   final bool isBottomIndicator;
 
   const CustomTabBar({
-    Key key,
-    @required this.icons,
-    @required this.selectedIndex,
-    @required this.onTap,
+    Key? key,
+    required this.icons,
+    required this.selectedIndex,
+    required this.onTap,
     this.isBottomIndicator = false,
   }) : super(key: key);
 

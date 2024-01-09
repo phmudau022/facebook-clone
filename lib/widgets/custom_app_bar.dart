@@ -1,7 +1,9 @@
+import 'package:facebook_clone/config/palette.dart';
+import 'package:facebook_clone/models/user_model.dart';
+import 'package:facebook_clone/widgets/circle_button.dart';
+import 'package:facebook_clone/widgets/custom_tab_bar.dart';
+import 'package:facebook_clone/widgets/user_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/config/palette.dart';
-import 'package:flutter_facebook_responsive_ui/models/models.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -11,11 +13,11 @@ class CustomAppBar extends StatelessWidget {
   final Function(int) onTap;
 
   const CustomAppBar({
-    Key key,
-    @required this.currentUser,
-    @required this.icons,
-    @required this.selectedIndex,
-    @required this.onTap,
+    Key? key,
+    required this.currentUser,
+    required this.icons,
+    required this.selectedIndex,
+    required this.onTap,
   }) : super(key: key);
 
   @override

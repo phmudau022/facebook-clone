@@ -1,8 +1,10 @@
+import 'package:facebook_clone/screens/home_screen.dart';
+import 'package:facebook_clone/widgets/custom_app_bar.dart';
+import 'package:facebook_clone/widgets/custom_tab_bar.dart';
+import 'package:facebook_clone/widgets/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/data/data.dart';
-import 'package:flutter_facebook_responsive_ui/screens/screens.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/widgets.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:facebook_clone/models/user_model.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart'; // Import the necessary user model
 
 class NavScreen extends StatefulWidget {
   @override
@@ -18,7 +20,8 @@ class _NavScreenState extends State<NavScreen> {
     Scaffold(),
     Scaffold(),
   ];
-  final List<IconData> _icons = const [
+
+  final List<IconData> _icons = [
     Icons.home,
     Icons.ondemand_video,
     MdiIcons.accountCircleOutline,
@@ -26,7 +29,14 @@ class _NavScreenState extends State<NavScreen> {
     MdiIcons.bellOutline,
     Icons.menu,
   ];
+
   int _selectedIndex = 0;
+
+  // Example: Define a dummy user
+  User currentUser = User(
+    name: 'John Doe',
+    imageUrl: 'https://example.com/avatar.jpg',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +48,10 @@ class _NavScreenState extends State<NavScreen> {
             ? PreferredSize(
                 preferredSize: Size(screenSize.width, 100.0),
                 child: CustomAppBar(
-                  currentUser: currentUser,
+                  currentUser: currentUser, // Pass the user to CustomAppBar
                   icons: _icons,
                   selectedIndex: _selectedIndex,
-                   onTap: (index) => setState(() => _selectedIndex = index),
+                  onTap: (index) => setState(() => _selectedIndex = index),
                 ),
               )
             : null,

@@ -1,13 +1,13 @@
+import 'package:facebook_clone/models/user_model.dart';
+import 'package:facebook_clone/widgets/profile_avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/models/models.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/widgets.dart';
 
 class UserCard extends StatelessWidget {
   final User user;
 
   const UserCard({
-    Key key,
-    @required this.user,
+    Key? key,
+    required this.user,
   }) : super(key: key);
 
   @override

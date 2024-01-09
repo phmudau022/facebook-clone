@@ -39,9 +39,9 @@ class HomeScreen extends StatelessWidget {
           ),
           // SliverToBoxAdapter(
           //   child: createPostContainer(currenUser: currentUser),
-          //   // child: Container(
-          //   //   height: 100.0,
-          //   //   color: Colors.red,
+          //   child: Container(
+          //     height: 100.0,
+          //     color: Colors.red,
           //   ),
         ],
       ),
